@@ -2,7 +2,7 @@
   {
     "name": "Иванова А. В.",
     "speciality": "Терапевт",
-    "photo": "https://example.com/photos/ivanova.jpg",
+    "photo": "https://static.mk.ru/upload/entities/2024/02/13/20/articles/facebookPicture/72/d8/f7/72/9cde30e1b35a36c3cbff51e47e6cc6de.jpg",
     "workTime": "Принимает по Пн, Вт, Ср, Чт с 09:00 до 16:00",
     "slots": [
       { "day": "Понедельник", "time": ["09:00", "10:00", "11:00"] },
