@@ -5,7 +5,7 @@
     "specialization": "Педиатр",
     "status": "Педиатр с 10-летним стажем.",
     "price": "1500 ₽",
-    "image": "https://example.com/images/ivanova.jpg",
+    "image": "https://islam.ru/sites/default/files/img/2017/veroeshenie/doktor.jpg",
     "schedule": [
       { "date": "2025-05-27", "time": ["09:00", "10:00", "11:00"] },
       { "date": "2025-05-28", "time": ["10:00", "12:00", "14:00"] }
