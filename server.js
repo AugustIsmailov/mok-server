@@ -42,10 +42,12 @@ app.get('/api/doctors/:id/dates', (req, res) => {
   }
 });
 
+// Обновленная функция с учётом новой структуры времени
 function formatSchedule(doctor) {
   let result = `${doctor.name} принимает:\n`;
   doctor.schedule.forEach(day => {
-    const times = day.time.join(', ');
+    // Берём только поле time из каждого объекта времени
+    const times = day.time.map(t => t.time).join(', ');
     result += `${day.date} — ${times}\n`;
   });
   return result;
