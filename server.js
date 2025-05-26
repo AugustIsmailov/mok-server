@@ -3,7 +3,8 @@ const fs = require('fs');
 const cors = require('cors');
 
 const app = express();
-const PORT = 3000;
+const port = process.env.PORT || 3000;
+
 
 app.use(cors()); // чтобы JAICP мог обращаться
 app.use(express.json());
@@ -27,6 +28,6 @@ app.get('/api/doctors/:id', (req, res) => {
 });
 
 // Старт сервера
-app.listen(PORT, () => {
-  console.log(`Mock server running at http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Mock server running at http://localhost:${port}`);
 });
