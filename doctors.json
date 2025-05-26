@@ -1,0 +1,168 @@
+[
+  {
+    "id": "ivanova_av",
+    "name": "Иванова А. В.",
+    "specialization": "Педиатр",
+    "status": "Педиатр с 10-летним стажем.",
+    "price": "1500 ₽",
+    "image": "https://example.com/images/ivanova.jpg",
+    "schedule": [
+      { "date": "2025-05-27", "time": ["09:00", "10:00", "11:00"] },
+      { "date": "2025-05-28", "time": ["10:00", "12:00", "14:00"] }
+    ]
+  },
+  {
+    "id": "kuznetsova_na",
+    "name": "Кузнецова Н. А.",
+    "specialization": "Педиатр",
+    "status": "Специалист по детским аллергиям.",
+    "price": "1700 ₽",
+    "image": "https://example.com/images/kuznetsova.jpg",
+    "schedule": [
+      { "date": "2025-05-29", "time": ["11:00", "13:00"] }
+    ]
+  },
+  {
+    "id": "petrov_sn",
+    "name": "Петров С. Н.",
+    "specialization": "Терапевт",
+    "status": "Кандидат медицинских наук.",
+    "price": "1800 ₽",
+    "image": "https://example.com/images/petrov.jpg",
+    "schedule": [
+      { "date": "2025-05-30", "time": ["10:00", "11:30", "15:00"] }
+    ]
+  },
+  {
+    "id": "kozlov_ik",
+    "name": "Козлов И. К.",
+    "specialization": "Кардиолог",
+    "status": "Кардиолог с 15-летним опытом.",
+    "price": "2000 ₽",
+    "image": "https://example.com/images/kozlov.jpg",
+    "schedule": [
+      { "date": "2025-05-27", "time": ["09:00", "12:00"] }
+    ]
+  },
+  {
+    "id": "sidorov_ia",
+    "name": "Сидоров И. А.",
+    "specialization": "Хирург",
+    "status": "Опытный хирург общего профиля.",
+    "price": "2500 ₽",
+    "image": "https://example.com/images/sidorov.jpg",
+    "schedule": [
+      { "date": "2025-05-28", "time": ["11:00", "13:00"] }
+    ]
+  },
+  {
+    "id": "smirnova_ek",
+    "name": "Смирнова Е. К.",
+    "specialization": "Терапевт",
+    "status": "Терапевт, специализация — инфекционные заболевания.",
+    "price": "1600 ₽",
+    "image": "https://example.com/images/smirnova.jpg",
+    "schedule": [
+      { "date": "2025-05-29", "time": ["10:30", "11:30", "14:00"] }
+    ]
+  },
+  {
+    "id": "lebedev_mv",
+    "name": "Лебедев М. В.",
+    "specialization": "Кардиолог",
+    "status": "Специалист по ЭКГ и нагрузочным тестам.",
+    "price": "2100 ₽",
+    "image": "https://example.com/images/lebedev.jpg",
+    "schedule": [
+      { "date": "2025-05-30", "time": ["08:00", "09:30", "10:30"] }
+    ]
+  },
+  {
+    "id": "novikova_ov",
+    "name": "Новикова О. В.",
+    "specialization": "Педиатр",
+    "status": "Работает с детьми до 7 лет.",
+    "price": "1550 ₽",
+    "image": "https://example.com/images/novikova.jpg",
+    "schedule": [
+      { "date": "2025-05-31", "time": ["09:00", "10:30"] }
+    ]
+  },
+  {
+    "id": "fedorov_ak",
+    "name": "Фёдоров А. К.",
+    "specialization": "Хирург",
+    "status": "Опытный травматолог.",
+    "price": "2700 ₽",
+    "image": "https://example.com/images/fedorov.jpg",
+    "schedule": [
+      { "date": "2025-06-01", "time": ["12:00", "13:30"] }
+    ]
+  },
+  {
+    "id": "vasilieva_yv",
+    "name": "Васильева Ю. В.",
+    "specialization": "Терапевт",
+    "status": "Профилактическая медицина и первичная диагностика.",
+    "price": "1500 ₽",
+    "image": "https://example.com/images/vasilieva.jpg",
+    "schedule": [
+      { "date": "2025-05-30", "time": ["10:00", "12:00"] }
+    ]
+  },
+  {
+    "id": "borisov_nv",
+    "name": "Борисов Н. В.",
+    "specialization": "Кардиолог",
+    "status": "Консультации по ишемической болезни сердца.",
+    "price": "2200 ₽",
+    "image": "https://example.com/images/borisov.jpg",
+    "schedule": [
+      { "date": "2025-06-02", "time": ["10:00", "11:00", "13:00"] }
+    ]
+  },
+  {
+    "id": "tarasova_sv",
+    "name": "Тарасова С. В.",
+    "specialization": "Педиатр",
+    "status": "Ведёт приём детей с хроническими заболеваниями.",
+    "price": "1800 ₽",
+    "image": "https://example.com/images/tarasova.jpg",
+    "schedule": [
+      { "date": "2025-06-03", "time": ["09:00", "11:00"] }
+    ]
+  },
+  {
+    "id": "egorov_iv",
+    "name": "Егоров И. В.",
+    "specialization": "Хирург",
+    "status": "Проводит плановые и экстренные операции.",
+    "price": "2900 ₽",
+    "image": "https://example.com/images/egorov.jpg",
+    "schedule": [
+      { "date": "2025-06-04", "time": ["10:00", "12:00", "14:00"] }
+    ]
+  },
+  {
+    "id": "morozova_lm",
+    "name": "Морозова Л. М.",
+    "specialization": "Терапевт",
+    "status": "Работает с пожилыми пациентами.",
+    "price": "1700 ₽",
+    "image": "https://example.com/images/morozova.jpg",
+    "schedule": [
+      { "date": "2025-06-05", "time": ["09:30", "10:30", "11:30"] }
+    ]
+  },
+  {
+    "id": "andreev_da",
+    "name": "Андреев Д. А.",
+    "specialization": "Кардиолог",
+    "status": "Опыт работы в реанимации и интенсивной терапии.",
+    "price": "2500 ₽",
+    "image": "https://example.com/images/andreev.jpg",
+    "schedule": [
+      { "date": "2025-06-06", "time": ["09:00", "10:00"] }
+    ]
+  }
+]
