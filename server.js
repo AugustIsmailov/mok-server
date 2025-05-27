@@ -24,7 +24,7 @@ app.get('/api/doctors/:id', (req, res) => {
 });
 
 app.get('/api/doctors/:id/schedule', (req, res) => {
-  const doctor = doctors.find(d => d.id === req.params.id);
+  const doctor = doctors.find(d => d.name === req.params.id);
   if (doctor) {
     res.json({ id: doctor.id, name: doctor.name, schedule: doctor.schedule });
   } else {
@@ -61,8 +61,6 @@ app.get('/api/doctors/:id/schedule-text', (req, res) => {
   }
 });
 
-// 🔐 Новый маршрут: блокировка слота
-// ...
 app.patch('/api/doctors/:id/schedule/lock', (req, res) => {
   const rawId = req.params.id;
   const doctorId = decodeURIComponent(rawId);
