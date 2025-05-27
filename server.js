@@ -62,8 +62,10 @@ app.get('/api/doctors/:id/schedule-text', (req, res) => {
 });
 
 // 🔐 Новый маршрут: блокировка слота
+// ...
 app.patch('/api/doctors/:id/schedule/lock', (req, res) => {
-  const doctorId = req.params.id;
+  // Декодируем id, чтобы сервер правильно находил врача
+  const doctorId = decodeURIComponent(req.params.id);
   const { date, time } = req.body;
 
   if (!date || !time) {
@@ -87,11 +89,12 @@ app.patch('/api/doctors/:id/schedule/lock', (req, res) => {
 
   day.time.splice(index, 1); // Удаляем слот — считаем, что он занят
 
-  // 📝 Сохраняем обратно в файл (если нужно)
+  // Сохраняем обратно в файл
   fs.writeFileSync('doctors.json', JSON.stringify(doctors, null, 2));
 
   return res.status(200).json({ message: 'Time slot locked' });
 });
+
 
 app.listen(port, () => {
   console.log(`Mock server running at http://localhost:${port}`);
