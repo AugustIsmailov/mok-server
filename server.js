@@ -64,8 +64,13 @@ app.get('/api/doctors/:id/schedule-text', (req, res) => {
 // 🔐 Новый маршрут: блокировка слота
 // ...
 app.patch('/api/doctors/:id/schedule/lock', (req, res) => {
-  // Декодируем id, чтобы сервер правильно находил врача
-  const doctorId = decodeURIComponent(req.params.id);
+  const rawId = req.params.id;
+  const doctorId = decodeURIComponent(rawId);
+
+  console.log('Raw ID from URL:', rawId);
+  console.log('Decoded doctorId:', doctorId);
+  console.log('All doctor IDs:', doctors.map(d => d.id));
+
   const { date, time } = req.body;
 
   if (!date || !time) {
