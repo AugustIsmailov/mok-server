@@ -42,11 +42,9 @@ app.get('/api/doctors/:id/dates', (req, res) => {
   }
 });
 
-// Обновленная функция с учётом новой структуры времени
 function formatSchedule(doctor) {
   let result = `${doctor.name} принимает:\n`;
   doctor.schedule.forEach(day => {
-    // Берём только поле time из каждого объекта времени
     const times = day.time.map(t => t.time).join(', ');
     result += `${day.date} — ${times}\n`;
   });
@@ -61,6 +59,38 @@ app.get('/api/doctors/:id/schedule-text', (req, res) => {
   } else {
     res.status(404).json({ error: 'Doctor not found' });
   }
+});
+
+// 🔐 Новый маршрут: блокировка слота
+app.patch('/api/doctors/:id/schedule/lock', (req, res) => {
+  const doctorId = req.params.id;
+  const { date, time } = req.body;
+
+  if (!date || !time) {
+    return res.status(400).json({ error: 'Missing date or time in request body' });
+  }
+
+  const doctor = doctors.find(d => d.id === doctorId);
+  if (!doctor) {
+    return res.status(404).json({ error: 'Doctor not found' });
+  }
+
+  const day = doctor.schedule.find(s => s.date === date);
+  if (!day) {
+    return res.status(404).json({ error: 'Date not found in schedule' });
+  }
+
+  const index = day.time.findIndex(t => t.time === time);
+  if (index === -1) {
+    return res.status(404).json({ error: 'Time slot not found or already taken' });
+  }
+
+  day.time.splice(index, 1); // Удаляем слот — считаем, что он занят
+
+  // 📝 Сохраняем обратно в файл (если нужно)
+  fs.writeFileSync('doctors.json', JSON.stringify(doctors, null, 2));
+
+  return res.status(200).json({ message: 'Time slot locked' });
 });
 
 app.listen(port, () => {
