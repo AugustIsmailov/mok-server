@@ -61,7 +61,7 @@ app.get("/api/doctors/:id/schedule-text", (req, res) => {
   }
 });
 
-app.patch("/api/doctors/:id/schedule/lock", (req, res) => {
+app.post("/api/doctors/:id/schedule/lock", (req, res) => {
   const rawId = req.params.id;
   const doctorId = decodeURIComponent(rawId);
 
